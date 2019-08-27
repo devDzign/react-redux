@@ -1,0 +1,3 @@
+export const ALL_COUNTRIES = 'ALL_COUNTRIES';
+export const CHANGE_MONEY = 'CHANGE_MONEY';
+
