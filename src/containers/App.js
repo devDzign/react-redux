@@ -4,6 +4,7 @@ import {Route, Switch} from "react-router-dom";
 
 import Home from '../components/Home'
 import Resources from '../components/Resources'
+import RequireAuthentication  from '../helpers/requireAuthentication'
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
             <div className="row">
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route exact path="/resource" component={Resources}/>
+                    <Route exact path="/resource" component={RequireAuthentication(Resources)}/>
                 </Switch>
             </div>
         </>
