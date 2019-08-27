@@ -11,8 +11,8 @@ class Header extends Component {
     }
 
     renderAuthLabel = () => {
-        const authLabelConnexion = <a className="nav-link" href="#" onClick={this.handleLogged}>Connexion</a>;
-        const authLabelDeconnexion = <a className="nav-link" href="#" onClick={this.handleLogged}>Déconnexion</a>;
+        const authLabelConnexion = <Link className="nav-link" to="/" onClick={this.handleLogged}>Connexion</Link>;
+        const authLabelDeconnexion = <Link className="nav-link" to="/" onClick={this.handleLogged}>Déconnexion</Link>;
 
         return !this.props.isAuth ? authLabelConnexion : authLabelDeconnexion;
     }
@@ -21,9 +21,9 @@ class Header extends Component {
 
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" to="/">
                     Navbar
-                </a>
+                </Link>
 
                 <button className="navbar-toggler"
                         type="button"
