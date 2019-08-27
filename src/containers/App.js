@@ -1,21 +1,24 @@
 import React from 'react';
 import Header from './Header'
+import {Route, Switch} from "react-router-dom";
+
+import Home from '../components/Home'
+import Resources from '../components/Resources'
 
 function App() {
-  return (
-      <>
-          <Header/>
-          <div className="row">
-            <div className="col-md-8">
-              <h1>Side 8</h1>
-            </div>
-            <div className="col-md-4">
-              <h1>Side 4</h1>
-            </div>
-          </div>
-      </>
+    return (
+        <>
+            <Header/>
 
-  );
+            <div className="row">
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/resource" component={Resources}/>
+                </Switch>
+            </div>
+        </>
+
+    );
 }
 
 export default App;

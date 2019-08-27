@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
+import {Link} from "react-router-dom";
 import {setAuthentication} from "../store/actions/actions";
 
 
@@ -13,7 +14,7 @@ class Header extends Component {
         const authLabelConnexion = <a className="nav-link" href="#" onClick={this.handleLogged}>Connexion</a>;
         const authLabelDeconnexion = <a className="nav-link" href="#" onClick={this.handleLogged}>Déconnexion</a>;
 
-       return  !this.props.isAuth ? authLabelConnexion : authLabelDeconnexion;
+        return !this.props.isAuth ? authLabelConnexion : authLabelDeconnexion;
     }
 
     render() {
@@ -38,14 +39,14 @@ class Header extends Component {
                 <div className="collapse navbar-collapse" id="navbarColor02">
                     <ul className="navbar-nav mr-auto align-content-lg-end">
                         <li className="nav-item active">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/">
                                 Home <span className="sr-only">(current)</span>
-                            </a>
+                            </Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">
+                            <Link className="nav-link" to="/resource">
                                 Ressources
-                            </a>
+                            </Link>
                         </li>
 
                         <li className="nav-item">
